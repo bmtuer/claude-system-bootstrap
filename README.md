@@ -2,17 +2,17 @@
 
 A reusable doc-driven workflow for working with Claude Code on long-running projects.
 
-If you've ever started a project with Claude Code and watched it slowly accumulate ad-hoc CLAUDE.md sections, scattered design docs, half-baked plan files, and rules-of-thumb that live only in your conversation history — this fixes that. Once.
+If you've ever started a project with Claude Code and watched it slowly accumulate ad-hoc CLAUDE.md sections, scattered design docs, half-baked plan files, and rules-of-thumb that live only in your conversation history: this tries to fix that.
 
 The bootstrap is a Claude Code skill. Drop it into any project, run `/bootstrap-claude-system`, and it interviews you (with a head start from scanning your codebase) before scaffolding a complete working structure: a `CLAUDE.md` constitution, a roadmap → sprint → plans → systems pipeline, per-surface rule modules, and four ready-to-use slash commands (`/new-plan`, `/session-end`, `/preflight`, `/review-diff`). After it runs, delete the bootstrap and the system is yours to evolve.
 
-Extracted from a real year-plus codebase. Opinionated about **structure** (file layout, lifecycle), intentionally blank about **content** (your rules, workstreams, and learned traps stay yours).
+Extracted from a real codebase. Opinionated about **structure** (file layout, lifecycle), intentionally blank about **content** (your engineering principles, workstreams, and learned traps stay yours).
 
 ## Why this exists
 
 Working with an AI on a project for more than a few weeks creates a context problem: the AI starts each session knowing nothing, and you start each session re-explaining things. The fix is to externalize context into versioned files the AI reads every session — a constitution, a forward-looking backlog, in-progress plan files, and living references for shipped systems.
 
-Most projects either don't do this (and pay the re-explanation tax forever) or invent the structure ad-hoc per project (and never converge on something repeatable). The bootstrap is the structure, captured once, reusable everywhere.
+Most projects either don't do this (and pay the re-explanation tax forever) or invent the structure ad-hoc per project (and never converge on something repeatable). Alternatively, you can pay a SaaS company. This bootstrap is the structure, free, and reusable everywhere.
 
 The meta-architecture is surface-portable — it works equally well in Claude Desktop or any AI coding tool. v1 scaffolds Claude Code specifically (depends on `.claude/skills/` and slash commands), but the produced structure is yours regardless of how you invoke the AI.
 
